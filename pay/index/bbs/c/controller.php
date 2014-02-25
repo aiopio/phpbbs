@@ -1,0 +1,30 @@
+<?php
+
+if($a=='tag'):
+elseif($a=='forum'):
+//list
+elseif($a=='thread'):
+//read
+  if($id):
+    $rsdb=getthread($id);
+    $title=$rsdb['title'];
+    $description=$rsdb['content'];
+    $keywords=$rsdb['tag'];
+    $author=$rsdb['uid'];
+    $list=getlistthread($id);
+    $listdb=$list['list'];
+    $pages =$list['page'];
+  endif;
+elseif($a=='edit'):
+  if($id):
+  	$rsdb=getthread($id);
+  else:
+  	$rsdb="";
+  endif;
+elseif($a=='save'):
+  $postdb=$_POST['postdb'];
+  $postdb['list']=time();
+  savethread($postdb);
+  exit();
+endif;
+?>

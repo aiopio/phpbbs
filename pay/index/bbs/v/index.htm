@@ -1,0 +1,26 @@
+<?php
+print<<<EOT
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>$title</title>
+  <meta name="description" content="$description">
+  <meta name="keywords" content="$keywords">
+  <meta name="author" content="$author">
+EOT;
+require(GLOBLV."head.htm");
+print<<<EOT
+  </head>
+  <body>
+    <main class="" id="" role="main">
+      <div class="container">
+      {$container}
+      </div>
+    </main>
+EOT;
+require(GLOBLV."foot.htm");
+print<<<EOT
+  </body>
+</html>
+EOT;
+?>

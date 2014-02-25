@@ -1,0 +1,69 @@
+<?php
+print<<<EOT
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>$title</title>
+  <meta name="description" content="$description">
+  <meta name="keywords" content="$keywords">
+  <meta name="author" content="$author">
+EOT;
+require(GLOBLV."head.htm");
+print<<<EOT
+  </head>
+  <body>
+    <main class="" id="" role="main">
+      <div class="container">
+        <form action="?m=bbs&a=save" method="post" class="form-horizontal">
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="input01">FID</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control input-md" name="postdb[fid]" value="{$rsdb['fid']}">
+            <p class="help-block">Supporting help text</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="input01">Uid</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control input-md" name="postdb[uid]" value="{$rsdb['uid']}">
+            <p class="help-block">Supporting help text</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="input01">Tag</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control input-md" name="postdb[tag]" value="{$rsdb['tag']}">
+            <p class="help-block">Supporting help text</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="input01">Title</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control input-md" name="postdb[title]" value="{$rsdb['title']}">
+            <p class="help-block">Supporting help text</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="input01">Content</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control input-md" name="postdb[content]" value="{$rsdb['content']}">
+            <p class="help-block">Supporting help text</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="input01">Content</label>
+          <div class="col-md-4">
+            <button class="btn btn-success">Button</button>
+            <p class="help-block">Supporting help text</p>
+          </div>
+        </div>
+        </form>
+      </div>
+    </main>
+EOT;
+require(GLOBLV."foot.htm");
+print<<<EOT
+  </body>
+</html>
+EOT;
+?>
